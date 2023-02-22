@@ -4,7 +4,7 @@
   <h1 align="center">JWOC Leaderboard</h1>
 
   <h3 align="center">
-    Official leaderboard for JWOC 2k22
+    Official leaderboard for JWOC 2k23
     <br />
     <br />
     <a href="https://leaderboard.jwoc.tech">Visit Here</a>

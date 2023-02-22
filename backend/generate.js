@@ -66,7 +66,7 @@ const fetchAllData = async () => {
 const getDatafromDB = async (userName) => {
   let finalData = { full_name: "", college: "" };
   try {
-    const db = client.db("jwoc");
+    const db = client.db("test");
     const collection = db.collection("mentees");
     const data = await collection.findOne({ $text: { $search: userName } });
     if (data) {
@@ -128,7 +128,7 @@ const fetchRepoData = async (repoName) => {
 
 const filterJwoc = (allData) => {
   let finalData = [];
-
+  const year = "2023";
   const jwocData = allData.filter((prData) => {
     let isJwoc = false;
     if (prData.merged_at) {
@@ -137,6 +137,7 @@ const filterJwoc = (allData) => {
           isJwoc = true;
         }
       });
+      if(!prData.created_at.includes(year)) isJwoc = false;
     }
 
     return isJwoc;
@@ -160,7 +161,7 @@ const filterJwoc = (allData) => {
 };
 
 const getPhase = (created_at) => {
-  const phase1deadlineISO = "2022-02-28T18:31:00.000Z";
+  const phase1deadlineISO = "2023-03-5T00:00:00.000Z";
   const deadline1 = new Date(phase1deadlineISO);
   const createdAtDate = new Date(created_at);
 

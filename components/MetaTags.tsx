@@ -11,18 +11,18 @@ const MetaTags = () => {
       <meta name="author" content="JWOC ORG" />
       <meta
         name="description"
-        content="Participant's Ranks in JWoC: JGEC Winter of Code, 2k22."
+        content="Participant's Ranks in JWoC: JGEC Winter of Code, 2k23."
       />
       <meta
         name="keywords"
-        content="jwoc, 2k22, jgec, winter, developer, code, jgec winter of code"
+        content="jwoc, 2k23, jgec, winter, developer, code, jgec winter of code"
       />
 
-      <meta property="og:site_name" content="JWOC 2K22" />
-      <meta property="og:title" content="JWOC 2K22" />
+      <meta property="og:site_name" content="JWOC 2k23" />
+      <meta property="og:title" content="JWOC 2k23" />
       <meta
         property="og:description"
-        content="Participant's Ranks in JWoC: JGEC Winter of Code, 2k22."
+        content="Participant's Ranks in JWoC: JGEC Winter of Code, 2k23."
       />
       <meta
         property="og:image"
