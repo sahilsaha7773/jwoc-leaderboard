@@ -25,6 +25,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "feat: updated data using GitHub workflow"
-          commit_user_name: niloysikdar
-          commit_user_email: niloysikdar30@gmail.com
-          commit_author: Niloy Sikdar
+          commit_user_name: sahilsaha7773
+          commit_user_email: sahilsaha7773@gmail.com
+          commit_author: Sahil Saha
