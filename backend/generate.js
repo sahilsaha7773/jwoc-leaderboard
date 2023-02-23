@@ -68,7 +68,7 @@ const getDatafromDB = async (userName) => {
   try {
     const db = client.db("test");
     const collection = db.collection("mentees");
-    const data = await collection.findOne({ $text: { $search: userName } });
+    const data = await collection.findOne({ github: {$regex: `${userName}` }});
     if (data) {
       finalData.full_name = data.name;
       finalData.college = data.college;
