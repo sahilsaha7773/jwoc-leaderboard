@@ -68,7 +68,7 @@ const getDatafromDB = async (userName) => {
   try {
     const db = client.db("test");
     const collection = db.collection("mentees");
-    const data = await collection.findOne({ github: {$regex: `${userName}` }});
+    const data = await collection.findOne({ github: { $regex: `${userName}` } });
     if (data) {
       finalData.full_name = data.name;
       finalData.college = data.college;
@@ -137,7 +137,7 @@ const filterJwoc = (allData) => {
           isJwoc = true;
         }
       });
-      if(!prData.created_at.includes(year)) isJwoc = false;
+      if (!prData.created_at.includes(year)) isJwoc = false;
     }
 
     return isJwoc;
@@ -161,11 +161,14 @@ const filterJwoc = (allData) => {
 };
 
 const getPhase = (created_at) => {
-  const phase1deadlineISO = "2023-03-5T00:00:00.000Z";
+  const phase1deadlineISO = "2023-03-04T18:30:00Z";
   const deadline1 = new Date(phase1deadlineISO);
   const createdAtDate = new Date(created_at);
 
-  if (createdAtDate > deadline1) return 2;
+  if (createdAtDate > deadline1) {
+    console.log("PHASE 2"); return 2;
+  }
+  console.log("PHASE 1");
   return 1;
 };
 
